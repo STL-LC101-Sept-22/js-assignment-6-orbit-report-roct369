@@ -1,3 +1,5 @@
+import { NgIf } from "@angular/common";
+
 export class Satellite {
 
 	name: string;
@@ -12,12 +14,10 @@ export class Satellite {
 		this.launchDate = launchDate;
 		this.orbitType = orbitType;
 		this.operational = operational;
-   }
+	}
 	
 	isSpaceDebris(): boolean {
-		return true;
-   }
-
+		return this.type === "Space Debris"
 }
-
+}
 // TODO 3a: fix isSpaceDebris check
